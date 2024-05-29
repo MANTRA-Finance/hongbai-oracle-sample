@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PriceResponse",
+  "type": "object",
+  "required": [
+    "expo",
+    "price",
+    "timestamp"
+  ],
+  "properties": {
+    "expo": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "price": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "timestamp": {
+      "type": "integer",
+      "format": "uint64",
+      "minimum": 0.0
+    }
+  },
+  "additionalProperties": false
+}

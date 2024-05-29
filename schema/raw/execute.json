@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "publish_price"
+      ],
+      "properties": {
+        "publish_price": {
+          "type": "object",
+          "required": [
+            "price",
+            "symbol"
+          ],
+          "properties": {
+            "price": {
+              "$ref": "#/definitions/Price"
+            },
+            "symbol": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "Price": {
+      "type": "object",
+      "required": [
+        "expo",
+        "price",
+        "timestamp"
+      ],
+      "properties": {
+        "expo": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "timestamp": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

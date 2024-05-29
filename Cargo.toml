@@ -1,0 +1,20 @@
+[package]
+name = "hongbai-oracle-sample"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cosmwasm-std = "2.0.0"
+cosmwasm-schema = "2.0.0"
+cw-storage-plus = "2.0.0"
+serde = "1.0.197"
+schemars = "0.8.0"
+
+[dev-dependencies]
+cosmwasm-schema = "2.0.0"
+cosmwasm-std = "2.0.0"
+cosmwasm-vm = "2.0.0"
+cw-multi-test = "2.0.0"
